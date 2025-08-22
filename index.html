@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: navy;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            /* Removes the bullets. A navigation bar does not need list markers */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* For horizontal layout */
+        }
+
+        .nav i {
+            display: block;
+        }
+
+        .nav a {
+            display: block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            width: 180px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            background-color: #555;
+        }
+
+        .nav a li {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .nav a i:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="#home"><i class="fa-solid fa-truck-fast"></i></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tracking">Tracking</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#logIn">LogIn</a></li>
+            <li><a href="#signUp">SignUp</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

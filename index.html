@@ -10,10 +10,25 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(/bg.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
         }
 
         .nav {
             background-color: navy;
+            position: fixed; /* stays fixed at top */
+            top: 0px;         /* always from very top */
+            left: 0px;
+            width: 100%;     /* full width */
+            z-index: 1000;    /* stays above other content */
         }
 
         .nav ul {
@@ -50,6 +65,95 @@
         .nav a i:hover {
             color: #ffcc00;
         }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            min-height: calc(100vh - 70px);
+            position: relative;
+        }
+
+        /* Left Content Box */
+        .content-box {
+            flex: 1;
+            max-width: 550px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .text-box {
+            max-width: 500px;
+            background-color: rgba(245, 245, 245, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .text-box h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: navy;
+        }
+
+        .text-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .visual-card {
+            width: 420px;
+            max-width: 46%;
+            background-color: #fff;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.6);
+        }
+
+        .pickup-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #222;
+        }
+
+        .pickup-form input {
+            width: 100%;
+            display: block;
+            padding: 12px 14px;
+            border: 1px solid #cfd8dc;
+            background-color: #f8fafc;
+            color: #111;
+            outline: none;
+            margin-bottom: 14px;
+        }
+
+        .pickup-form input:focus {
+            border-color: #90caf9;
+            box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.25);
+        }
+
+        .pickup-form button {
+            width: 100%;
+            padding: 12px 14px;
+            background: navy;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .pickup-form button:hover {
+            background: #0b2a8b;
+        }
     </style>
 </head>
 
@@ -61,10 +165,32 @@
             <li><a href="#tracking">Tracking</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#logIn">LogIn</a></li>
+            <li><a href="/Login.html" target="_blank">LogIn</a></li>
             <li><a href="#signUp">SignUp</a></li>
         </ul>
     </div>
+    <section class=" hero-section">
+        <div class="text-box">
+            <h2>Fast & Reliable Courier Service</h2>
+            <p>
+                We deliver your packages safely and on time across the country.
+                With real-time tracking, 24/7 support, and affordable pricing,
+                our courier service ensures your parcels reach their destination
+                without any hassle.
+            </p>
+        </div>
+        <aside class="visual-card" aria-label="Pickup and Drop-off Form">
+            <form class="pickup-form" action="#">
+                <label for="pickup-pin"></label>
+                <input id="pickup-pin" name="pickupPin" type="text" inputmode="numeric" pattern="\\d{6}" maxlength="6"
+                    placeholder="Pickup Pin Code" required />
+                <label for="dropoff-pin"></label>
+                <input id="dropoff-pin" name="dropoffPin" type="text" inputmode="numeric" pattern="\\d{6}" maxlength="6"
+                    placeholder="Drop-off pin Code" required />
+                <button type="submit">Ship Now</button>
+            </form>
+        </aside>
+    </section>
 </body>
 
 </html>

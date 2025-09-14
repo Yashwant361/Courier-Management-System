@@ -10,7 +10,7 @@ This project allows **Users** to book and track couriers, **Admins** to manage s
 ## 📌 Features
 
 ### 👤 User
-- Register & Login
+- Register ,Forget Password & Login
 - Book courier (pickup & delivery details, package weight, etc.)
 - Get a unique **Tracking ID**
 - Track courier status
